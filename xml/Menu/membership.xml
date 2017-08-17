@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<menu>
+  <item>
+    <path>civicrm/membershipperiod</path>
+    <path_arguments>membership_id=%%membership_id%%</path_arguments>
+    <page_callback>CRM_Membership_Page_MembershipPeriod</page_callback>
+    <title>MembershipPeriod</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+</menu>

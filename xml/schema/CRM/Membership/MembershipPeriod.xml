@@ -1,0 +1,61 @@
+
+<table>
+  <base>CRM/Membership</base>
+  <class>MembershipPeriod</class>
+  <name>civicrm_membershipperiod</name>
+  <comment>FIXME</comment>
+  <add>4.4</add>
+  <log>true</log>
+
+  <field>
+    <name>id</name>
+    <type>int unsigned</type>
+    <required>true</required>
+    <comment>Unique MembershipPeriod ID</comment>
+    <add>4.4</add>
+  </field>
+  <primaryKey>
+    <name>id</name>
+    <autoincrement>true</autoincrement>
+  </primaryKey>
+
+  <field>
+    <name>contact_id</name>
+    <type>int unsigned</type>
+    <comment>FK to Contact</comment>
+    <add>4.4</add>
+  </field>
+  <field>
+    <name>membership_id</name>
+    <type>int unsigned</type>
+    <comment>FK to Membership</comment>
+    <add>4.4</add>
+  </field>
+  <field>
+    <name>start_date</name>
+    <type>date</type>
+    <comment>FK to Membership</comment>
+    <add>4.4</add>
+  </field>
+  <field>
+    <name>end_date</name>
+    <type>date</type>
+    <comment>FK to Membership</comment>
+    <add>4.4</add>
+  </field>
+  <foreignKey>
+    <name>contact_id</name>
+    <table>civicrm_contact</table>
+    <key>id</key>
+    <add>4.4</add>
+    <onDelete>CASCADE</onDelete>
+  </foreignKey>
+  <foreignKey>
+    <name>membership_id</name>
+    <table>civicrm_membership</table>
+    <key>id</key>
+    <add>4.4</add>
+    <onDelete>CASCADE</onDelete>
+  </foreignKey>
+
+</table>
