@@ -235,8 +235,7 @@ function membership_civicrm_entityTypes(&$entityTypes) {
     'class' => 'CRM_Membership_DAO_MembershipPeriod',
     'table' => 'civicrm_membershipperiod',
   );
-    };
-
+};
 
 /**
  * Add new link to display membership renewal log using hook_civicrm_links
@@ -268,22 +267,5 @@ function membership_civicrm_links($op, $objectName, $objectId, &$links, &$mask, 
       // Do Nothing
       break;
   }
-}
-/**
- * Add new tab to the contact page to show member renewals
- *
- * @param array $tabs
- * @param int $contactID
- */
-function membership_civicrm_tabs(&$tabs, $contactID) {
-  $url = CRM_Utils_System::url('civicrm/all/membershipperiod', "reset=1&snippet=1&force=1&cid=$contactID");
-  $renewalTab = array(
-    'id' => 'membershipperiod',
-    'url' => $url,
-    'title' => 'Membership Periods',
-    'weight' => 30,
-    'class' => 'livePage',
-  );
-  $tabs[] = $renewalTab;
 }
 

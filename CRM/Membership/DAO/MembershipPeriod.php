@@ -65,7 +65,7 @@ class CRM_Membership_DAO_MembershipPeriod extends CRM_Core_DAO {
    * Class constructor.
    */
   function __construct() {
-    $this->__table = 'civicrm_membership_period';
+    $this->__table = 'civicrm_membershipperiod';
     parent::__construct();
   }
   /**
